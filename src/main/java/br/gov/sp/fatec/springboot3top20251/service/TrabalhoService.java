@@ -17,10 +17,14 @@ public class TrabalhoService {
     @Autowired
     private TrabalhoRepository repo;
     
+
+    // Questão 3: Método para listar todos os trabalhos
     public List<Trabalho> buscarTodos() {
         return repo.findAll();
     }
 
+
+    // Questão 3: Método para cadastrar um novo trabalho
     public Trabalho novo(Trabalho trabalho) {
         if(trabalho.getTitulo() == null ||
             trabalho.getTitulo().isBlank() ||
@@ -34,7 +38,11 @@ public class TrabalhoService {
         return repo.save(trabalho);
     }
 
+
+    
+    // Questão 3: Método para buscar trabalhos por título e nota
     public List<Trabalho> buscarPorTituloENota(String titulo, Integer nota) {
         return repo.buscarPorTituloENota(titulo, nota);
     }
+
 }

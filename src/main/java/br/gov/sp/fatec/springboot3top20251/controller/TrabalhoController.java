@@ -22,16 +22,19 @@ public class TrabalhoController {
     @Autowired
     public TrabalhoService service;
 
+    // Questão 4: Rota para listar todos os trabalhos
     @GetMapping
     public List<Trabalho> buscarTrabalhos() {
         return service.buscarTodos();
     }
 
+    // Questão 4: Rota para cadastrar um novo trabalho
     @PostMapping
     public Trabalho novoTrabalho(@RequestBody Trabalho trabalho) {
         return service.novo(trabalho);
     }
 
+    // Questão 4: Rota para buscar trabalhos por título e nota
     @GetMapping(value = "/{titulo}/{nota}")
     public List<Trabalho> buscarTrabalhoPorTituloENota(@PathVariable("titulo") String titulo, @PathVariable("nota") Integer nota) {
         return service.buscarPorTituloENota(titulo, nota);

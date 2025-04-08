@@ -15,3 +15,5 @@ public interface TrabalhoRepository extends JpaRepository<Trabalho, Long>{
     public List<Trabalho> buscarPorTituloENota(String titulo, Integer nota);
 
 }
+
+// Questão 2: Método que busca trabalhos por palavra no título e nota superior a um valor

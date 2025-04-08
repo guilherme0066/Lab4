@@ -93,3 +93,5 @@ public class Trabalho {
     }
     
 }
+
+// Questão 1: Classe que mapeia a tabela tra_trabalho
