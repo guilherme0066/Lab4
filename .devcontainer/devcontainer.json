@@ -11,7 +11,17 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// This can be used to network with other containers or with the host.
-	, "forwardPorts": [5432, 8080]
+	,
+	"forwardPorts": [
+		5432,
+		8080
+	],
+	"features": {
+		"ghcr.io/itsmechlark/features/postgresql:1": {
+			"version": "17"
+		},
+		"ghcr.io/roul/devcontainer-features/mise-java:1": {}
+	}
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "java -version",
