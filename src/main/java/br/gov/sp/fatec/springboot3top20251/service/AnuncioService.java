@@ -19,7 +19,7 @@ public class AnuncioService {
     }
 
     public List<Anuncio> buscarPorTituloEData(String titulo, LocalDate dataLimite) {
-        return repo.findByAncTituloContainingIgnoreCaseAndAncDataLimiteLessThan(titulo, dataLimite);
+        return repo.findByAncTituloContainingIgnoreCaseAndAncDataLimiteBefore(titulo, dataLimite);
     }
 
     public Anuncio cadastrar(Anuncio anuncio) {

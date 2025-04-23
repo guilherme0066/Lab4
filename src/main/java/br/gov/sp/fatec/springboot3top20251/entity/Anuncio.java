@@ -1,17 +1,18 @@
 package br.gov.sp.fatec.springboot3top20251.entity;
 
 import java.time.LocalDate;
-import java.time.chrono.ChronoLocalDate;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import lombok.Data;
 
-@Entity
-@Table(name = "anc_anuncio")
+@Data
+@Entity(name = "anc_anuncio")
 public class Anuncio {
 
     @Id
@@ -24,6 +25,7 @@ public class Anuncio {
     private Float ancValor;
 
     @Column(nullable = false)
+    @CreationTimestamp
     private LocalDate ancDataCadastro;
 
     private LocalDate ancDataLimite;
@@ -31,26 +33,5 @@ public class Anuncio {
     @Column(length = 200)
     private String ancDescricao;
 
-    public Object getAncTitulo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAncTitulo'");
-    }
-
-    public ChronoLocalDate getAncDataCadastro() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAncDataCadastro'");
-    }
-
-    public void setAncDataCadastro(LocalDate now) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setAncDataCadastro'");
-    }
-
-    public Object getAncDataLimite() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAncDataLimite'");
-    }
-
-    // Getters e Setters
 }
 
