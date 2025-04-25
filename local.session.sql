@@ -1,6 +1,3 @@
-CREATE USER spring WITH PASSWORD 'pass123';
-GRANT ALL PRIVILEGES ON DATABASE postgres TO spring;
-
 create table age_agendamento (
   age_id bigint generated always as identity,
   age_instrucoes varchar(150),
@@ -13,6 +10,3 @@ create table age_agendamento (
 insert into age_agendamento (age_instrucoes, age_data_hora_inicio, age_duracao_prevista)
   values ('Chegue meia hora antes', '2025-04-24 19:35', 15),
          (null, current_timestamp, null);
-
-grant update, delete, insert, select on all tables in schema public to spring;
-
